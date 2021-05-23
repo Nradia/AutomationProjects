@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="6" guice-stage="DEVELOPMENT" name="Failed suite [Regression]" parallel="tests">
+  <parameter name="website" value="https://homedepot.com"/>
+  <listeners>
+    <listener class-name="CompanyName.AaBootCamp.MyListeners"/>
+  </listeners>
+  <test thread-count="6" name="adhoc1(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="CompanyName.AaBootCamp.HomedpotCreate">
+        <methods>
+          <include name="CreateAccountTest"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- CompanyName.AaBootCamp.HomedpotCreate -->
+    </classes>
+  </test> <!-- adhoc1(failed) -->
+  <test thread-count="6" name="adhoc2(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="CompanyName.AaBootCamp.HomedpotCreate">
+        <methods>
+          <include name="CreateAccountTest"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- CompanyName.AaBootCamp.HomedpotCreate -->
+    </classes>
+  </test> <!-- adhoc2(failed) -->
+</suite> <!-- Failed suite [Regression] -->
