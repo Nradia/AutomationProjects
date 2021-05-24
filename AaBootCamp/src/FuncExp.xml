@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+<parameter name="website" value="https://homedepot.com"></parameter>
+<listeners>
+      <listener class-name="expediaProject.ExpListeners" ></listener>
+  </listeners>
+<test name="adhoc1">
+  <parameter name="browser" value="Chrome"></parameter>
+  <classes>
+  <class name="expediaProject.ExpediaBookingFlight"></class>
+  </classes>
+  </test>
+  <test name="adhoc2">
+  <parameter name="browser" value="firefox"></parameter>
+  <classes>
+  <class name="expediaProject.ExpediaBookingFlight"></class>
+  </classes>
+  </test>
+</suite>
